@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+<img src="https://i.imgur.com/KBwhRtk.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React "Students" Lab
 
-## Available Scripts
+## Intro
 
-In the project directory, you can run:
+This lab will provide some practice doing the following:
 
-### `npm start`
+- Creating a UI using a hierarchy of components
+- Adding state to a function component with the `useState` hook.
+- Passing data as props from a parent to a child component
+- Mapping arrays of data into arrays of components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**This lab is a DELIVERABLE**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+1. Fork and clone this repository
+2. Review starter code and application architecture
+3. Install project dependencies
+4. Review requirements below and begin development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Minimum Requirements
 
-### `npm run build`
+**The layout and styling of the markup is left up to your discretion.**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Use the `useState` hook to add a `students` state value to the `<App>` component and initialize it with the following array of "student" data:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+[
+  {
+    name: 'Cait Yomorta',
+    bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus placeat nostrum explicabo? Voluptatibus expedita saepe officia optio, commodi totam ratione laudantium ipsum porro molestias, quasi nulla minus vitae laboriosam corrupti Delectus inventore explicabo est odit incidunt rem a recusandae eum pariatur. Aperiam doloremque blanditiis harum voluptate animi fugit beatae asperiores quo, dignissimos sed illum veniam eum accusantium nulla quod voluptatum',
+    scores: [
+      {
+        date: '2018-02-08',
+        score: 77
+      },
+      {
+        date: '2018-04-22',
+        score: 92
+      },
+      {
+        date: '2018-09-15',
+        score: 68
+      }
+    ]
+  },
+  {
+    name: 'Holly Baird',
+    bio: 'Eum molestiae explicabo deserunt, maiores quod eaque omnis tenetur vero ducimus, magnam autem! Quia facere quaerat eum repudiandae dolorum eligendi iure quae. Eos id possimus accusantium, earum animi modi hic.',
+    scores: [
+      {
+        date: '2018-12-14',
+        score: 88
+      },
+      {
+        date: '2019-01-09',
+        score: 79
+      },
+      {
+        date: '2019-02-23',
+        score: 91
+      },
+      {
+        date: '2019-03-01',
+        score: 95
+      }
+    ]
+  },
+  {
+    name: 'Wes Mungia',
+    bio: 'Repudiandae veritatis recusandae quidem tenetur impedit, numquam incidunt enim, adipisci id cupiditate asperiores nam perferendis. Facere odit laborum ipsum autem repellendus natus eius doloremque ullam perferendis. Enim repellendus ut veniam?',
+    scores: [
+      {
+        date: '2018-10-11',
+        score: 62
+      },
+      {
+        date: '2018-11-24',
+        score: 74
+      },
+      {
+        date: '2018-12-19',
+        score: 85
+      }
+    ]
+  }
+]
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Code the `<App>` component's JSX to display a `<Student>` component for each student object in the `students` state.
 
-### `npm run eject`
+3. Create and code a `<Student>` component that:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    - Accepts a student object as a prop.
+    - Renders the student's `name` & `bio` properties.
+    - Renders a `<Score>` component for each score object in the student's `scores` property.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Create and code the `<Score>` component so that it renders the score object's `date` & `score` properties.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### This Lab is a Deliverable
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As usual, please make a pull request by the assigned due date.
