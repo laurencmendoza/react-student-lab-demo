@@ -79,12 +79,3 @@ function App() {
 }
 
 export default App;
-
-// export default function Student({studentData}) {
-//   const studentNames = studentData.map(s=> s.name)
-//   return (
-//       <ul>
-//           <li>{studentNames}</li>
-//       </ul>
-//   )
-// }
